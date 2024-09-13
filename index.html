@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомагазин</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp" type="text/javascript"></script>
+</head>
+<body>
+    
+    <header class="header" style="background-image: url('images/bg.jpg');">
+        <a name="top"></a>
+        <div class="container">
+            <div class="top-nav">
+                <div class="logo">
+                    <a href="#">
+                        <img src="images/logo.png" height="50" alt="logo">
+                    </a>
+                </div>
+                <nav>
+                    <a href="#top">Главная</a>
+                    <a href="#about">О нас</a>
+                    <a href="#feedback">Обратная связь</a>
+                    <a href="#gallery">Галерея</a>
+                </nav>
+                <div class="social">
+                    <a href="#">
+                        <img src="images/vk.png" alt="vk" height="25">
+                    </a>
+                    <a href="#">
+                        <img src="images/youtube.png" alt="youtube" height="25">
+                    </a>
+                </div>
+            </div>
+            <div class="top-content">
+                <div class="title">Generic<br>Company</div>
+                <div class="list-models">
+                    <div class="item">
+                        <span>Модель А</span>
+                        <p>Краткий контент про модель А, с описанием о модели...</p>
+                    </div>
+                    <div class="item">
+                        <span>Модель А</span>
+                        <p>Краткий контент про модель А, с описанием о модели...</p>
+                    </div>
+                    <div class="item">
+                        <span>Модель А</span>
+                        <p>Краткий контент про модель А, с описанием о модели...</p>
+                    </div>
+                    <div class="item">
+                        <span>Модель А</span>
+                        <p>Краткий контент про модель А, с описанием о модели...</p>
+                    </div>
+                </div>
+                <a href="#" class="top-link">
+                    <img src="images/play.png" width="35" height="35" alt="go">
+                    Приступить
+                </a>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </header>
+
+    <main class="main">
+
+        <a name="about"></a>
+        <div class="block-card">
+            <div class="container">
+                <div class="block-title">
+                    <span>О нас</span>
+                    <p>Краткое описание блока</p>
+                </div>
+                <div class="list-cards">
+                    <div class="card" style="background-image: url(images/bg.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));">
+                        <div class="title">Авто 1</div>
+                        <div class="info">
+                            <span>100</span>
+                            <p>Описание контента автомобиля</p>
+                            <a href="#" class="main-btn">Перейти</a>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url(images/bg.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));">
+                        <div class="title">Авто 2</div>
+                        <div class="info">
+                            <span>200</span>
+                            <p>Описание контента автомобиля</p>
+                            <a href="#" class="main-btn">Перейти</a>
+                        </div>
+                    </div>
+                    <div class="card" style="background-image: url(images/bg.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));">
+                        <div class="title">Авто 3</div>
+                        <div class="info">
+                            <span>300</span>
+                            <p>Описание контента автомобиля</p>
+                            <a href="#" class="main-btn">Перейти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a name="feedback"></a>
+        <div class="block-feedback">
+            <div class="container">
+                <div class="block-title">
+                    <span>Обратная связь</span>
+                    <p>Краткое описание блока</p>
+                </div>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" name="name" id="name" onfocus="deleteErrorsStyle(this)">
+                        <span class="error-name invalid">Неверное имя</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Контактный номер</label>
+                        <input type="phone" 
+                        name="phone" 
+                        id="phone" 
+                        placeholder="Номер должен начинаться на +7 или 8" 
+                        onfocus="deleteErrorsStyle(this)">
+                        <span class="error-phone invalid">Неверное имя</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="theme">Тема сообщения</label>
+                        <select name="theme" id="theme">
+                            <option>Тема 1</option>
+                            <option>Тема 2</option>
+                            <option>Тема 3</option>
+                            <option>Тема 4</option>
+                            <option>Тема 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea name="message" id="message" rows="4" onfocus="deleteErrorsStyle(this)"></textarea>
+                        <span class="error-message invalid">Неверное имя</span>
+                    </div>
+                    <button type="submit" class="main-btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+
+        <a name="gallery"></a>
+        <div class="block-gallery">
+            <div class="container">
+                <div class="block-title">
+                    <span>Галерея</span>
+                    <p>Краткое описание блока</p>
+                </div>
+                <div class="gallery">
+                    <div class="item">
+                        <div class="overlay"></div>
+                        <img src="images/bg.jpg" alt="picture">
+                    </div>
+                    <div class="item">
+                        <div class="overlay"></div>
+                        <img src="images/bg.jpg" alt="picture">
+                    </div>
+                    <div class="item">
+                        <div class="overlay"></div>
+                        <img src="images/bg.jpg" alt="picture">
+                    </div>
+                    <div class="item">
+                        <div class="overlay"></div>
+                        <img src="images/bg.jpg" alt="picture">
+                    </div>
+                    <div class="item">
+                        <div class="overlay"></div>
+                        <img src="images/bg.jpg" alt="picture">
+                    </div>
+                    <div class="item">
+                        <div class="overlay"></div>
+                        <img src="images/bg.jpg" alt="picture">
+                    </div>
+                    <div class="item">
+                        <div class="overlay"></div>
+                        <img src="images/bg.jpg" alt="picture">
+                    </div>
+                    <div class="item">
+                        <div class="overlay"></div>
+                        <img src="images/bg.jpg" alt="picture">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block-map">
+            <div class="container">
+                <div class="block-title">
+                    <span>Как до нас добраться?</span>
+                    <p>Краткое описание блока</p>
+                </div>
+                <div class="map-desc">
+                    <div>
+                        <img src="images/marker.png" alt="marker" height="60">
+                    </div>
+                    <div>
+                        <p>
+                            <span>Адрес:</span>
+                            г. Москва, ул. Пушкина 101
+                        </p>
+                        <p>
+                            <span>Контактный номер:</span>
+                            <a href="tel:+79007717777">+7 (900) 77-17-777</a>
+                        </p>
+                        <p>
+                            <span>E-mail:</span>
+                            <a href="mailto:generalcompany@mail.ru">generalcompany@mail.ru</a>
+                        </p>
+                        <p>
+                            <span>Время работы:</span>
+                            09:00 ч. - 20:00 ч.
+                        </p>
+                    </div>
+                </div>
+                <div id="YMapsID" class="yamaps"></div>
+            </div>
+        </div>
+
+        <div class="block-desc">
+            <div class="container">
+                <div class="desc-content">
+                    <div class="desc-left">
+                        <img src="images/bg.jpg" alt="picture">
+                    </div>
+                    <div class="desc-right">
+                        <div class="title">Блок с контентом</div>
+                        <p>Описание блока с контентом, наполняемое текстом и адаптирующееся под разные разрешения экрана</p>
+                        <ul>
+                            <li>Список 1</li>
+                            <li>Список 2</li>
+                            <li>Список 3</li>
+                            <li>Список 4</li>
+                            <li>Список 5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#">
+                        <img src="images/logo.png" height="50" alt="logo">
+                    </a>
+                    2022 © Все права защищены.
+                </div>
+                <div class="footer-nav">
+                    <nav>
+                        <a href="#top" class="main-btn">Главная</a>
+                        <a href="#about" class="main-btn">О нас</a>
+                        <a href="#feedback" class="main-btn">Обратная связь</a>
+                        <a href="#gallery" class="main-btn">Галерея</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        ymaps.ready(function () {
+          var myMap = new ymaps.Map("YMapsID", {
+            center: [55.76, 37.64],
+            zoom: 10
+          });
+        });
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
