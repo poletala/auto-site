@@ -117,7 +117,7 @@
                 <form action="#">
                     <div class="form-group">
                         <label for="name">Имя</label>
-                        <input type="text" name="name" id="name" onfocus="deleteErrorsStyle(this)">
+                        <input type="text" name="name" id="name" maxlength="50" onfocus="deleteErrorsStyle(this)">
                         <span class="error-name invalid">Неверное имя</span>
                     </div>
                     <div class="form-group">
@@ -145,10 +145,12 @@
                         <span class="error-message invalid">Неверное имя</span>
                     </div>
                     <button type="submit" class="main-btn">Отправить</button>
+                    <div class="message-sent">
+                        Сообщение отправлено!
+                    </div>
                 </form>
             </div>
         </div>
-
         <a name="gallery"></a>
         <div class="block-gallery">
             <div class="container">

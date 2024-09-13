@@ -3,6 +3,7 @@ const phoneInput = document.querySelector('#phone')
 const messageInput = document.querySelector('#message')
 const theme = document.querySelector('#theme')
 const form = document.querySelector('form')
+const messageSentInfo = document.querySelector('.message-sent')
 const inputElements = [nameInput, phoneInput, messageInput]
 const nameRegex = /^[a-zA-Zа-яА]+$/;
 const phoneRegex = /(^(?!\+.*\(.*\).*--.*$)(?!\+.*\(.*\).*-$)(([0-9]{0,12})?(\+[0-9]{11})?)$)|(^.*$)/; 
@@ -53,10 +54,12 @@ function onSubmit () {
         }
         console.log(userMessage)
         clearFields ()
-        alert('Сообщение отправлено!')
-    } else {
-        alert('Обнаружены неверные данные. Проверьте правильность введенных полей.')
-    }
+        messageSentInfo.style.opacity = '1'
+        setTimeout(function () {
+            messageSentInfo.style.opacity = '0'
+        }, 2000)
+      
+    } 
     
 }
 
